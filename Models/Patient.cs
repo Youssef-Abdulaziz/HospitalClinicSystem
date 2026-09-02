@@ -1,15 +1,15 @@
 
-namespace HospitalClinicSystem.Model
+namespace HospitalClinicSystem.Models
 {
 
     public class Patient
     {
 
-        private int PatientId { get; set; }
-        private string PatientName { get; set; }
-        private int Age { get; set; }
-        private string Gender { get; set; }
-        private string ContactNumber { get; set; }
+        public int PatientId { get; private set; }
+        public string PatientName { get; private set; }
+        public int Age { get; private set; }
+        public string Gender { get; private set; }
+        public string ContactNumber { get; private set; }
 
         public Patient(int patientId, string patientName, int age, string gender, string contactNumber)
         {
@@ -17,7 +17,7 @@ namespace HospitalClinicSystem.Model
                 throw new ArgumentException("Patientname Can't be empty");
 
             if (age <= 0)
-                throw new ArgumentException("Patientname Age Must Be Greater Than 0");
+                throw new ArgumentException("Patient Age Must Be Greater Than 0");
 
             PatientId = patientId;
             PatientName = patientName;
