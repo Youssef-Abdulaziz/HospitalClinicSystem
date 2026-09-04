@@ -1,4 +1,5 @@
 
+using HospitalClinicSystem.Enums;
 namespace HospitalClinicSystem.Models
 {
 
@@ -8,10 +9,10 @@ namespace HospitalClinicSystem.Models
         public int PatientId { get; private set; }
         public string PatientName { get; private set; }
         public int Age { get; private set; }
-        public string Gender { get; private set; }
+        public Gender Gender { get; private set; }
         public string ContactNumber { get; private set; }
 
-        public Patient(int patientId, string patientName, int age, string gender, string contactNumber)
+        public Patient(int patientId, string patientName, int age, Gender gender, string contactNumber)
         {
             if (string.IsNullOrWhiteSpace(patientName))
                 throw new ArgumentException("Patientname Can't be empty");

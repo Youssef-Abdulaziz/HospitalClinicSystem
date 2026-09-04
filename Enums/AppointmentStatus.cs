@@ -4,6 +4,7 @@ namespace HospitalClinicSystem.Enums
     {
         Cancelled,
         Confirmed,
-        Delayed
+        Delayed,
+        Pending
     }
 }

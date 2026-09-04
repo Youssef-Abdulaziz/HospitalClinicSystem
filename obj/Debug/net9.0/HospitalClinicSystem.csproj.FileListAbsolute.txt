@@ -1,0 +1,15 @@
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\bin\Debug\net9.0\HospitalClinicSystem.exe
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\bin\Debug\net9.0\HospitalClinicSystem.deps.json
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\bin\Debug\net9.0\HospitalClinicSystem.runtimeconfig.json
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\bin\Debug\net9.0\HospitalClinicSystem.dll
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\bin\Debug\net9.0\HospitalClinicSystem.pdb
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\obj\Debug\net9.0\HospitalClinicSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\obj\Debug\net9.0\HospitalClinicSystem.AssemblyInfoInputs.cache
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\obj\Debug\net9.0\HospitalClinicSystem.AssemblyInfo.cs
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\obj\Debug\net9.0\HospitalClinicSystem.csproj.CoreCompileInputs.cache
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\obj\Debug\net9.0\HospitalClinicSystem.sourcelink.json
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\obj\Debug\net9.0\HospitalClinicSystem.dll
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\obj\Debug\net9.0\refint\HospitalClinicSystem.dll
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\obj\Debug\net9.0\HospitalClinicSystem.pdb
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\obj\Debug\net9.0\HospitalClinicSystem.genruntimeconfig.cache
+C:\Users\YOUSEF\Desktop\HospitalClinicSystem\obj\Debug\net9.0\ref\HospitalClinicSystem.dll
