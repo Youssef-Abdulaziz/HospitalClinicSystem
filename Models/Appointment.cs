@@ -19,6 +19,10 @@ namespace HospitalClinicSystem.Models
             AppointmentTime = appointmentTime;
             AppointmentStatus = appointmentStatus;
         }
+        public void UpdateStatus(AppointmentStatus newStatus)
+        {
+            AppointmentStatus = newStatus;
+        }
 
     }
 }

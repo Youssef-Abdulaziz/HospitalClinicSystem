@@ -2,7 +2,6 @@ using HospitalClinicSystem.Enums;
 using HospitalClinicSystem.Models;
 using System;
 using System.Collections.Generic;
-using System.IO.Pipelines;
 using System.Linq;
 namespace HospitalClinicSystem.Services
 {
@@ -38,6 +37,41 @@ namespace HospitalClinicSystem.Services
         public List<Doctor> ViewAllDoctors()
         {
             return new List<Doctor>(_doctors);
+        }
+
+        public Appointment BookingAppointment(int appointmentId, int patientId, int doctorId, DateTime appointmentTime)
+        {
+            Patient patient = _patients.FirstOrDefault(p => p.PatientId == patientId);
+            if (patient == null)
+                throw new InvalidOperationException($"Patient {patientId} not found");
+            Doctor doctor = _doctors.FirstOrDefault(d => d.DoctorId == doctorId);
+            throw new InvalidOperationException($"Doctor {doctorId} not found");
+
+            bool isDoctorBusy = _appointments.Any(a =>
+            a.AppointmentDoctor.DoctorId == doctorId &&
+            a.AppointmentTime == appointmentTime &&
+            a.AppointmentStatus != AppointmentStatus.Cancelled
+            );
+            if (isDoctorBusy)
+                throw new InvalidOperationException($"Doctor {doctorId} already has an appointment at {appointmentTime}.");
+
+
+            Appointment appointment = new Appointment(appointmentId, patient, doctor, appointmentTime, AppointmentStatus.Pending);
+            _appointments.Add(appointment);
+            return appointment;
+        }
+
+        public List<Appointment> ViewAllAppointment()
+        {
+            return new List<Appointment>(_appointments);
+        }
+
+        public void UpdateAppointmentStatus(int appointmentId, AppointmentStatus newStatus)
+        {
+            Appointment appointment = _appointments.FirstOrDefault(a => a.AppointmentId == appointmentId);
+            if (appointment == null)
+                throw new InvalidOperationException($"Appointment {appointmentId} not found.");
+            appointment.UpdateStatus(newStatus);
         }
 
     }
