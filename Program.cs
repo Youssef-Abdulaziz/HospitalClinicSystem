@@ -156,6 +156,39 @@ namespace HospitalClinicSystem
         }
 
 
+        private static void ViewAllAppointment()
+        {
+            List<Appointment> appointments = clinic.ViewAllAppointment();
+            if (appointments.Count == 0)
+            {
+                Console.WriteLine("No appointments found.");
+            }
+            else
+            {
+                foreach (Appointment a in appointments)
+                {
+                    Console.WriteLine($"ID: {a.AppointmentId}, Patient: {a.AppointmentPatient.PatientName}, Doctor: {a.AppointmentDoctor.DoctorName}, Time: {a.AppointmentTime}, Status: {a.AppointmentStatus}");
+                }
+            }
+        }
 
+        private static void UpdateAppointmentStatus()
+        {
+            Console.Write("Appointment ID: ");
+            int updateId = int.Parse(Console.ReadLine());
+
+            Console.Write("New Status (Pending/Confirmed/Cancelled/Delayed): ");
+            AppointmentStatus newStatus = Enum.Parse<AppointmentStatus>(Console.ReadLine());
+
+            try
+            {
+                clinic.UpdateAppointmentStatus(updateId, newStatus);
+                Console.WriteLine("Appointment status updated.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
     }
 }
