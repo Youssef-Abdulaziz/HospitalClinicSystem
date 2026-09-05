@@ -130,5 +130,32 @@ namespace HospitalClinicSystem
             }
         }
 
+        private static void BookAppointment()
+        {
+            Console.Write("Appointment ID: ");
+            int appointmentId = int.Parse(Console.ReadLine());
+
+            Console.Write("Patient ID: ");
+            int bookPatientId = int.Parse(Console.ReadLine());
+
+            Console.Write("Doctor ID: ");
+            int bookDoctorId = int.Parse(Console.ReadLine());
+
+            Console.Write("Appointment Date/Time (yyyy-MM-dd HH:mm): ");
+            DateTime appointmentTime = DateTime.Parse(Console.ReadLine());
+
+            try
+            {
+                clinic.BookingAppointment(appointmentId, bookPatientId, bookDoctorId, appointmentTime);
+                Console.WriteLine("Appointment booked successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+
+
     }
 }
