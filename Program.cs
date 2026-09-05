@@ -114,5 +114,21 @@ namespace HospitalClinicSystem
             }
         }
 
+        private static void ViewAllDoctors()
+        {
+            List<Doctor> doctors = clinic.ViewAllDoctors();
+            if (doctors.Count == 0)
+            {
+                Console.WriteLine("No doctors found.");
+            }
+            else
+            {
+                foreach (Doctor d in doctors)
+                {
+                    Console.WriteLine($"ID: {d.DoctorId}, Name: {d.DoctorName}, Specialty: {d.Specialty}, Contact: {d.ContactNumber}");
+                }
+            }
+        }
+
     }
 }
