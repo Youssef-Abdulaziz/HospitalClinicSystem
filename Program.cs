@@ -72,6 +72,33 @@ namespace HospitalClinicSystem
             }
         }
 
+        private static void AddDoctor()
+        {
+            Console.Write("Doctor ID: ");
+            int doctorId = int.Parse(Console.ReadLine());
+
+            Console.Write("Name: ");
+            string doctorName = Console.ReadLine();
+
+            Console.Write("Specialty: ");
+            string specialty = Console.ReadLine();
+
+            Console.Write("Contact Number: ");
+            string doctorContact = Console.ReadLine();
+
+            try
+            {
+                clinic.AddDoctor(doctorId, doctorName, specialty, doctorContact);
+                Console.WriteLine("Doctor added successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+
+
 
     }
 }
