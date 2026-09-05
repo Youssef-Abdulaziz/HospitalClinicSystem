@@ -98,7 +98,21 @@ namespace HospitalClinicSystem
         }
 
 
-
+        private static void ViewAllPatients()
+        {
+            List<Patient> patients = clinic.ViewAllPatients();
+            if (patients.Count == 0)
+            {
+                Console.WriteLine("No patients found.");
+            }
+            else
+            {
+                foreach (Patient p in patients)
+                {
+                    Console.WriteLine($"ID: {p.PatientId}, Name: {p.PatientName}, Age: {p.Age}, Gender: {p.Gender}, Contact: {p.ContactNumber}");
+                }
+            }
+        }
 
     }
 }
